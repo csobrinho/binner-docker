@@ -1,10 +1,10 @@
-FROM --platform=linux/arm64 alpine:3.20
+FROM alpine:3.20
 ENV BINNER_VERSION=2.6.3
 WORKDIR /app
 
 ADD https://github.com/replaysMike/Binner/releases/download/v${BINNER_VERSION}/Binner_linux-arm64-${BINNER_VERSION}.tar.gz /app/
 
-VOLUME /app/data
+VOLUME [ "/app/data" ]
 RUN set -ex; \
     \
     mkdir -p /app/data/db /app/data/files; \
