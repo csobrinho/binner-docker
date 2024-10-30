@@ -10,6 +10,7 @@ RUN set -ex; \
     mkdir -p /app/data/db /app/data/files; \
     apt-get -y update; \
     apt-get install --no-install-recommends --no-install-suggests -y \
+      ca-certificates \
       libicu72 \
       libssl3 \
       sqlite3; \
